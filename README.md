@@ -1,6 +1,9 @@
 # AI Call Center Agent
 
-Backend do obsługi zgłoszeń serwisowych przez AI — Proof of Concept.
+Proof of Concept aplikacji wykorzystującej FastAPI oraz OpenAI API do automatycznej obsługi zgłoszeń serwisowych.
+
+System analizuje wiadomości użytkownika, identyfikuje kluczowe informacje (typ zgłoszenia, urządzenie, adres oraz numer telefonu), zarządza stanem rozmowy i zapisuje kompletne zgłoszenia w bazie danych.
+
 
 ## Architektura
 
@@ -97,9 +100,13 @@ Odpowiedź gdy dane niekompletne:
 
 ## Ograniczenia PoC
 
-- Stan rozmów przechowywany w pamięci aplikacji (nie w Redis).
-- Brak obsługi audio (STT/TTS).
-- Brak integracji z telefonią (Twilio).
-- SQLite zamiast PostgreSQL.
+Projekt ma charakter demonstracyjny i został przygotowany jako Proof of Concept.
 
-Pełna architektura produkcyjna opisana jest w dokumentacji projektu.
+Obecna wersja nie obejmuje:
+
+* przechowywania stanu rozmowy w Redis,
+* obsługi audio (STT/TTS),
+* integracji z telefonią (np. Twilio),
+* uwierzytelniania użytkowników,
+* wdrożenia produkcyjnego i monitoringu aplikacji.
+
